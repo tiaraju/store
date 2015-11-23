@@ -29,7 +29,6 @@ router.get('/\/product',function(req,res){
 });
 
 
-//TODO test
 router.post('/addproduct',function(req,res){
 	var product = new Product(req.body);
 	var error= {};
