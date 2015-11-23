@@ -1,17 +1,12 @@
-var name = '';
-var price= '';
-var description= '';
+var mongoose = require('mongoose');
 
+var ProductSchema = new mongoose.Schema(
+	{
+		name:{type:String,required:true},
+		price:{type:Number,required:true},
+		quantity:{type:Number,required:true}
 
-var setName = function(newName){
-	name = newName;
-}
+	}
+);
 
-var setPrice = function(newPrice){
-	price = newPrice;
-}
-
-var setDescripton = function(newDescription){
-	description = newDescription
-}
-
+module.exports = mongoose.model("Product",ProductSchema);
