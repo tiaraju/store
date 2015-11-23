@@ -30,8 +30,7 @@ router.get('/\/product',function(req,res){
 
 
 //TODO test
-router.post('/addProduct',function(req,res){
-	res.send("WORKING");
+router.post('/addproduct',function(req,res){
 	var product = new Product(req.body);
 	var error= {};
 	var result = {};
@@ -44,7 +43,7 @@ router.post('/addProduct',function(req,res){
 	      error.code == 11000 ? res.status(409) : res.status(500);
 	  }else{
 	  	 res.status(201); //HTTP created code
-	  	 result.uri = "/products/product/" + user.username;
+	  	 result.uri = "/products/product/" + product.name;
 	  	}
 
 	  	res.send(JSON.stringify({"result": result, "error": error}));
