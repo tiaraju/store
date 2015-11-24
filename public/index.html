@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="store">
 <head>
 	<title>My Store</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
-
+	<script src="/node_modules/angular/angular.js"></script>
+	<script src="/node_modules/angular-route/angular-route.js"></script>
+	<script src="/javascripts/core.js"></script>
+	<script src="/javascripts/routeconfig.js"></script>
 </head>
-<body>
-	<div class="container">
-  		<div class="jumbotron" align="center">
-    		<h1>My Store</h1>      
-    		<p>Put here some propaganda</p>
-  		</div>
-	</div>
+<body ng-view>
 
 </body>
 </html>
