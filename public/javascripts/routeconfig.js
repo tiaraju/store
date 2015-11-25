@@ -5,6 +5,6 @@ angular.module("store").config(function($routeProvider){
 	});
 
 	$routeProvider.otherwise({
-		redirecTo:"/start"
+		redirectTo:"/start"
 	});
 });

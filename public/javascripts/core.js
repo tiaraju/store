@@ -1,1 +1,1 @@
-angular.module('store',['ngRoute']);
+angular.module("store",['ngRoute']);
