@@ -36,14 +36,14 @@ app.use(function(req,res,next){
     next();
 });
 
-/*app.use('/', routes);
-app.use('/users', users);
-app.use('/products',products);
-*/
-
-app.get('*',function(req,res){
+app.get('/',function(req,res){
   res.sendFile('./public/index.html');
 });
+//app.use('/', routes);
+app.use('/users', users);
+app.use('/products',products);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
