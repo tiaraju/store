@@ -1,10 +1,12 @@
-angular.module("store").config(function($routeProvider,productService){
+angular.module("store").config(function($routeProvider){
 
 	$routeProvider.when("/start",{
 		templateUrl:"views/start.html",
 		controller:"productController",
 		resolve:{
-			productService.loadProducts();
+			products:function(productService){
+				return productService.loadProducts();
+			}
 		}
 	});
 

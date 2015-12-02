@@ -1,5 +1,3 @@
-angular.module("store").controller("productController",function($scope,$http,productService){
-	$scope.products = {};
-
-
+angular.module("store").controller("productController",function($scope,productService){
+	$scope.products = productService.getProducts();
 });

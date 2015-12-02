@@ -96,49 +96,26 @@
 
 
 	<section>
-
-		<div class="row">
-
-			<div class="left-sidebar">
-				<h4>SideBar</h4>
-
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h3>Category</h3>
+					</div>
+				</div>
+				<div class="col-sm-9 padding-right">
+					<ul class="products" >
+						<li ng-repeat="product in products">
+							<a href="#">
+								<img src="public/images/products/gallery3.jpg">
+								<h4 align="center">{{product.name}}</h4>
+								<h5 align="center"> {{product.description}}</h5>
+								<p align="center">{{product.price | currency}}</p>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-
-			<div class="container">
-				<ul class="products" ng-repeat="product in products">
-					<li>
-						<a href="#">
-							<img src="public/images/products/gallery3.jpg">
-							<h4 align="center">{{product.name}}</h4>
-							<h5 align="center"> {{product.description}}</h5>
-							<p align="center">{{product.price}}</p>
-
-						</a>
-
-					</li>
-					<!-- <li>
-						<a href="#">
-							<img src="public/images/products/gallery4.jpg">
-							<h4 align="center">TESTE2</h4>
-							<h5 align="center"> Description</h5>
-							<p align="center">20</p>
-
-						</a>
-
-					</li>
-					<li>
-						<a href="#">
-							<img src="public/images/products/gallery1.jpg">
-							<h4 align="center">TESTE3</h4>
-							<h5 align="center"> Description</h5>
-							<p align="center">20</p>
-
-						</a>
-					</li> -->
-
-				</ul>
-			</div>
-			<pre> {{products | json}}</pre>
 		</div>
 
 	</section>
