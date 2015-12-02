@@ -37,9 +37,9 @@ function addSubject(d){
 
 //write data to request body
     data = {};
-    data.name= 'moto';
-    data.price= 1000;
-    data.quantity=10;
+    data.name= 'car';
+    data.price= 33000;
+    data.quantity=20;
 
     req.write(JSON.stringify(data));
     req.end();
